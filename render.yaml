@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: gestor_contratos
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "streamlit run main.py --server.port=$PORT --server.headless=true"
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10.13
